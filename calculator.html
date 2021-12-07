@@ -1,0 +1,223 @@
+<html>
+<head>
+</head>
+<body>
+<div class="block block-calculator block-my-calculator block-calculator-my-calculator odd block-without-title" id="block-calculator-my-calculator">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      
+  			  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			  <script type="text/javascript" src="js/calculator.js"></script>
+			  <style>
+			    table.data_table th, table.data_table td {
+			      border:1px solid #CCC;
+			      text-align: left;
+			    }
+			  </style>
+
+
+			  <div style="float:left;">
+			  <div style="font-size:1.5em; margin-top:7px">Your annual salary ($):</div>
+			  <input type="text" name="salary" id="salary" style="width:150px; height:45px; font-size:1.5em; font-family:Open Sans" value="50,123" onkeyup="format(this)">
+			  </div>
+                          <div style="float: right;">
+			  <label><input type="checkbox" name="param_super" id="param_super" value="1"> Includes <a href="//atotaxcalculator.com.au/superannuation" target="_blank">superannuation</a></label>
+			  <label><input type="checkbox" name="param_help" id="param_help" value="1"> Includes <a href="//atotaxcalculator.com.au/help-debt" target="_blank">HELP debt</a></label>
+			  <label><input type="checkbox" name="param_resident" id="param_resident" value="1"> <a href="//atotaxcalculator.com.au/non-resident" target="_blank">Non-resident</a></label>
+			  <div style="text-align:right;"><input type="button" name="calc_btn" value=" CALCULATE > " onclick="javascript: update_numbers();" style="margin-top:10px; margin-bottom:10px; font-size:1.2em; padding: 10px;"></div>
+			  </div>	  
+<div style="clear:both;"></div>
+<div style="display:block; margin: 15px 0px;">
+<!-- ato-tax-calc_728x90 -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3681251289972506" data-ad-slot="9828101184"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+			  <div class="year_tabs" id="tab_2020" style="display:inline-block; width:100px; margin-right:5px; border:1px solid #CCC; border-bottom:0; text-align:center; padding:5px 0;">
+			    <a class="links_years" id="link_2020" href="javascript:changeTab('2020');">2020-2021</a>
+			  </div>
+			  <div class="year_tabs" id="tab_2021" style="display:inline-block; width:100px; margin-right:5px; border:1px solid #CCC; border-bottom:0; text-align:center; padding:5px 0;">
+			    <a class="links_years" id="link_2021" style="font-weight:bold" href="javascript:changeTab('2021');">2021-2022</a>
+			  </div> <br style="clear:both">
+
+			  <table class="data_table" id="table_2020" style="display:none">
+			    <tbody><tr>
+			      <th>Year 2020-2021</th>
+			      <th>Weekly</th>
+			      <th>Fortnightly</th>
+			      <th>Monthly</th>
+			      <th>Annually</th>
+			    </tr>
+			    <tr>
+			      <td><b>Gross income</b></td>
+			      <td id="income_weekly_2020">$0.00</td>
+			      <td id="income_fornightly_2020">$0.00</td>
+			      <td id="income_monthly_2020">$0.00</td>
+			      <td id="income_annually_2020">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Superannuation</b></td>
+			      <td id="super_weekly_2020">$0.00</td>
+			      <td id="super_fornightly_2020">$0.00</td>
+			      <td id="super_monthly_2020">$0.00</td>
+			      <td id="super_annually_2020">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Tax</b></td>
+			      <td id="tax_weekly_2020">$0.00</td>
+			      <td id="tax_fornightly_2020">$0.00</td>
+			      <td id="tax_monthly_2020">$0.00</td>
+			      <td id="tax_annually_2020">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>HELP debt</b></td>
+			      <td id="help_weekly_2020">$0.00</td>
+			      <td id="help_fornightly_2020">$0.00</td>
+			      <td id="help_monthly_2020">$0.00</td>
+			      <td id="help_annually_2020">$0.00</td>
+			    </tr><tr>
+			      <td><b>Medicare levy</b></td>
+			      <td id="medical_weekly_2020">$0.00</td>
+			      <td id="medical_fornightly_2020">$0.00</td>
+			      <td id="medical_monthly_2020">$0.00</td>
+			      <td id="medical_annually_2020">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Tax offsets</b></td>
+			      <td id="offset_weekly_2020">$0.00</td>
+			      <td id="offset_fornightly_2020">$0.00</td>
+			      <td id="offset_monthly_2020">$0.00</td>
+			      <td id="offset_annually_2020">$0.00</td>
+			    </tr><tr>
+			      <th style="font-size:1.2em; font-weight:bold;">Net income</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_weekly_2020">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_fornightly_2020">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_monthly_2020">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_annually_2020">$0.00</th>
+			    </tr>
+			  </tbody></table>
+
+			  <table class="data_table" id="table_2021">
+			    <tbody><tr>
+			      <th>Year 2021-2022</th>
+			      <th>Weekly</th>
+			      <th>Fortnightly</th>
+			      <th>Monthly</th>
+			      <th>Annually</th>
+			    </tr>
+			    <tr>
+			      <td><b>Gross income</b></td>
+			      <td id="income_weekly_2021">$0.00</td>
+			      <td id="income_fornightly_2021">$0.00</td>
+			      <td id="income_monthly_2021">$0.00</td>
+			      <td id="income_annually_2021">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Superannuation</b></td>
+			      <td id="super_weekly_2021">$0.00</td>
+			      <td id="super_fornightly_2021">$0.00</td>
+			      <td id="super_monthly_2021">$0.00</td>
+			      <td id="super_annually_2021">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Tax</b></td>
+			      <td id="tax_weekly_2021">$0.00</td>
+			      <td id="tax_fornightly_2021">$0.00</td>
+			      <td id="tax_monthly_2021">$0.00</td>
+			      <td id="tax_annually_2021">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>HELP debt</b></td>
+			      <td id="help_weekly_2021">$0.00</td>
+			      <td id="help_fornightly_2021">$0.00</td>
+			      <td id="help_monthly_2021">$0.00</td>
+			      <td id="help_annually_2021">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Medicare levy</b></td>
+			      <td id="medical_weekly_2021">$0.00</td>
+			      <td id="medical_fornightly_2021">$0.00</td>
+			      <td id="medical_monthly_2021">$0.00</td>
+			      <td id="medical_annually_2021">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Tax offsets</b></td>
+			      <td id="offset_weekly_2021">$0.00</td>
+			      <td id="offset_fornightly_2021">$0.00</td>
+			      <td id="offset_monthly_2021">$0.00</td>
+			      <td id="offset_annually_2021">$0.00</td>
+			    </tr><tr>
+			      <th style="font-size:1.2em; font-weight:bold;">Net income</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_weekly_2021">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_fornightly_2021">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_monthly_2021">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_annually_2021">$0.00</th>
+			    </tr>
+			  </tbody></table>
+
+			  <table class="data_table" id="table_2022" style="display:none">
+			    <tbody><tr>
+			      <th>Year 2022-2023</th>
+			      <th>Weekly</th>
+			      <th>Fortnightly</th>
+			      <th>Monthly</th>
+			      <th>Annually</th>
+			    </tr>
+			    <tr>
+			      <td><b>Gross income</b></td>
+			      <td id="income_weekly_2022">$0.00</td>
+			      <td id="income_fornightly_2022">$0.00</td>
+			      <td id="income_monthly_2022">$0.00</td>
+			      <td id="income_annually_2022">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Superannuation</b></td>
+			      <td id="super_weekly_2022">$0.00</td>
+			      <td id="super_fornightly_2022">$0.00</td>
+			      <td id="super_monthly_2022">$0.00</td>
+			      <td id="super_annually_2022">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Tax</b></td>
+			      <td id="tax_weekly_2022">$0.00</td>
+			      <td id="tax_fornightly_2022">$0.00</td>
+			      <td id="tax_monthly_2022">$0.00</td>
+			      <td id="tax_annually_2022">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>HELP debt</b></td>
+			      <td id="help_weekly_2022">$0.00</td>
+			      <td id="help_fornightly_2022">$0.00</td>
+			      <td id="help_monthly_2022">$0.00</td>
+			      <td id="help_annually_2022">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Medicare levy</b></td>
+			      <td id="medical_weekly_2022">$0.00</td>
+			      <td id="medical_fornightly_2022">$0.00</td>
+			      <td id="medical_monthly_2022">$0.00</td>
+			      <td id="medical_annually_2022">$0.00</td>
+			    </tr>
+			    <tr>
+			      <td><b>Tax offsets</b></td>
+			      <td id="offset_weekly_2022">$0.00</td>
+			      <td id="offset_fornightly_2022">$0.00</td>
+			      <td id="offset_monthly_2022">$0.00</td>
+			      <td id="offset_annually_2022">$0.00</td>
+			    </tr><tr>
+			      <th style="font-size:1.2em; font-weight:bold;">Net income</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_weekly_2022">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_fornightly_2022">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_monthly_2022">$0.00</th>
+			      <th style="font-size:1.2em; font-weight:bold;" id="net_annually_2022">$0.00</th>
+			    </tr>
+			  </tbody></table>
+<div id="text_after_calculations"></div>
+
+			      </div>
+  </div>
+</div>
+</body>
+</html>
